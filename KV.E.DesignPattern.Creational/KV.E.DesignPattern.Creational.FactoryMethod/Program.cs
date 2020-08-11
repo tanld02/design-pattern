@@ -6,7 +6,7 @@ namespace KV.E.DesignPattern.Creational.FactoryMethod
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            new Client().Main();
         }
     }
 }
