@@ -6,7 +6,12 @@ namespace KV.E.DesignPattern.Creational.Singleton
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Normal singleton
+            Singleton singletonA = Singleton.GetInstance();
+            Singleton singletonB = Singleton.GetInstance();
+            // Thread safe
+            SingletonThreadSafe singletonThreadSafeA = SingletonThreadSafe.GetInstance("A");
+            SingletonThreadSafe singletonThreadSafeB = SingletonThreadSafe.GetInstance("B");
         }
     }
 }
