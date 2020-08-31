@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KV.E.DesignPattern.Structural.Bridge.Implement;
+using System;
 
 namespace KV.E.DesignPattern.Structural.Bridge
 {
@@ -6,7 +7,14 @@ namespace KV.E.DesignPattern.Structural.Bridge
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Client client = new Client();
+            Abstraction abstraction;
+
+            abstraction = new Abstraction(new ConcreteImplementationA());
+            client.ClientCode(abstraction);
+            Console.WriteLine();
+            abstraction = new ExtendedAbstraction(new ConcreteImplementationB());
+            client.ClientCode(abstraction);
         }
     }
 }
